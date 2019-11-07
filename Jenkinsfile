@@ -6,5 +6,12 @@ pipeline {
                 sh 'echo "Hello world!"'
             }
         }
+        stage ("scan-publish-sonar"){
+            steps {
+                withSonarQubeEnv('Sonarqube') {
+                    
+                }
+            }
+        }
     }
 }
